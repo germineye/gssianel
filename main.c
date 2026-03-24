@@ -5,11 +5,9 @@
 #define MAX_SIZE 36 // Giới hạn kích thước tối đa của ma trận hệ số
 
 // a là ma trận mở rộng (kích thước n x n+1). 
-// Cột cuối cùng chứa mảng giá trị vế phải của hệ phương trình.
 double a[MAX_SIZE][MAX_SIZE + 1];
 int n; // Số lượng phương trình (hoặc số ẩn)
 
-// Khai báo các hàm để code gọn gàng
 void mtrx_in();
 void gss();
 int findPiv(int, int);
@@ -21,7 +19,6 @@ int main()
     printf("enter the number of equations: ");
     scanf("%d", &n);
 
-    // Bắt lỗi nhập vớ vẩn (số âm, bằng 0 hoặc to hơn mức cho phép)
     if (n <= 0 || n > MAX_SIZE)
     {
         printf("im not einstien🥀\n");
